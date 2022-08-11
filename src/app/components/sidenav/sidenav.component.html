@@ -1,0 +1,56 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer  mode="side">
+    <div class="topo-sidenav-menu">
+
+      <img src="../../../assets/img/LogoTreinamentosIcone.png" alt="" width="50px">
+    </div>
+
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+          <i class="material-icons">
+              home
+          </i>
+          Início
+      </a>
+      <a mat-list-item  routerLink="/profissional">
+          <i class="material-icons">
+              person
+          </i>
+          Profissionais
+      </a>
+
+      <a mat-list-item  routerLink="/estabelecimento">
+        <i class="material-icons">
+            apartment
+        </i>
+        Estabelecimento
+    </a>
+
+    <a mat-list-item  routerLink="/vincular">
+      <i class="material-icons">
+          add_business
+      </i>
+      Vínculos
+  </a>
+  </mat-nav-list>
+
+
+  </mat-drawer>
+
+
+
+    <div class="mat-toolbar">
+      <mat-toolbar >
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a href="http://localhost:4200">
+        <img src="../../../assets/img/LogoPreto.png" alt="" width="250px" class="img-topo">
+      </a>
+      </mat-toolbar>
+
+    </div>
+
+<router-outlet></router-outlet>
+
+</mat-drawer-container>
