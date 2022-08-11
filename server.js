@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('./dist/vincula-medico-front'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/vincula-medico-front/'}),
+    res.sendFile('index.html', {root: 'dist/app-heroku/'}),
 );
 
 // Start the app by listening on the default Heroku port
