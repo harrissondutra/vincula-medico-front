@@ -10,15 +10,25 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
-import { ProfissionalComponent } from './views/profissional/profissional.component';
 import { MatListModule } from '@angular/material/list';
 import { VincularComponent } from './views/vincular/vincular.component';
 import { EstabelecimentoComponent } from './views/estabelecimento/estabelecimento.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ProfissionalCadastroComponent } from './views/profissional-cadastro/profissional-cadastro.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
+import { ProfissionalCreateComponent } from './views/profissional/profissional-create/profissional-create.component';
+import { EstabelecimentoCreateComponent } from './views/estabelecimento/estabelecimento-create/estabelecimento-create.component';
+import { EstabelecimentoReadComponent } from './views/estabelecimento/estabelecimento-read/estabelecimento-read.component';
+import { ProfissionalReadComponent } from './views/profissional/profissional-read/profissional-read.component';
+
+
+
+
+
 
 
 
@@ -27,10 +37,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AppComponent,
     SidenavComponent,
     HomeComponent,
-    ProfissionalComponent,
     VincularComponent,
     EstabelecimentoComponent,
-    ProfissionalCadastroComponent
+    ProfissionalCreateComponent,
+    ProfissionalReadComponent,
+    EstabelecimentoCreateComponent,
+    EstabelecimentoReadComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +56,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCardModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatInputModule,
+    MatSelectModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

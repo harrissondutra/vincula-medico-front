@@ -11,7 +11,7 @@ import { Profissional } from './profissional.model';
 })
 export class ProfissionalService {
 
-  baseUrl = "http://localhost:4042/products";
+  baseUrl = "http://localhost:4042/profissional";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

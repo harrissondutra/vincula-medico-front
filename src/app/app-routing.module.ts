@@ -1,17 +1,22 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { EstabelecimentoComponent } from './views/estabelecimento/estabelecimento.component';
-import { ProfissionalComponent } from './views/profissional/profissional.component';
+import { ProfissionalReadComponent } from './views/profissional/profissional-read/profissional-read.component';
 import { VincularComponent } from './views/vincular/vincular.component';
+import { ProfissionalCreateComponent } from './views/profissional/profissional-create/profissional-create.component';
+import { EstabelecimentoReadComponent } from './views/estabelecimento/estabelecimento-read/estabelecimento-read.component';
+import { EstabelecimentoCreateComponent } from './views/estabelecimento/estabelecimento-create/estabelecimento-create.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'profissional', component: ProfissionalComponent },
+  { path: 'profissional', component: ProfissionalReadComponent },
   { path: 'vincular', component: VincularComponent },
-  { path: 'estabelecimento', component: EstabelecimentoComponent },
-  { path: '**', redirectTo: 'home' }
+  { path: 'estabelecimento', component: EstabelecimentoReadComponent },
+  { path: 'estabelecimento-create', component: EstabelecimentoCreateComponent },
+  // { path: '**', redirectTo: 'home' },
+  { path: 'profissional-cadastro', component: ProfissionalCreateComponent }
 ];
 
 @NgModule({

@@ -1,8 +1,8 @@
-<mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer  mode="side">
+<mat-drawer-container class="container" autosize >
+  <mat-drawer #drawer  mode="side" [opened]="true">
     <div class="topo-sidenav-menu">
 
-      <img src="../../../assets/img/LogoTreinamentosIcone.png" alt="" width="50px">
+      <img src="../../../assets/img/LogoTreinamentosIcone.png" alt="" width="200px">
     </div>
 
     <mat-nav-list class="nav-list">
@@ -12,18 +12,44 @@
           </i>
           Início
       </a>
-      <a mat-list-item  routerLink="/profissional">
+      <a mat-list-item  [matMenuTriggerFor]="menu" >
           <i class="material-icons">
               person
           </i>
           Profissionais
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/profissional-cadastro">
+              <mat-icon>person_add</mat-icon>
+              <span>Cadastrar</span>
+            </button>
+
+            <button mat-menu-item routerLink="/profissional">
+              <mat-icon>list</mat-icon>
+              <span>Listar todos</span>
+            </button>
+
+          </mat-menu>
       </a>
 
-      <a mat-list-item  routerLink="/estabelecimento">
+      <a mat-list-item [matMenuTriggerFor]="menu2"  routerLink="/estabelecimento">
         <i class="material-icons">
             apartment
         </i>
         Estabelecimento
+
+        <mat-menu #menu2="matMenu">
+          <button mat-menu-item routerLink="/estabelecimento-create">
+            <mat-icon>domain_add</mat-icon>
+            <span>Cadastrar</span>
+          </button>
+
+          <button mat-menu-item routerLink="/estabelecimento">
+            <mat-icon>list</mat-icon>
+            <span>Listar todos</span>
+          </button>
+
+        </mat-menu>
     </a>
 
     <a mat-list-item  routerLink="/vincular">
@@ -41,12 +67,16 @@
 
     <div class="mat-toolbar">
       <mat-toolbar >
-        <button mat-icon-button (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <a href="https://vincula-medico-front.herokuapp.com">
-        <img src="../../../assets/img/LogoPreto.png" alt="" width="200px" class="img-topo">
-      </a>
+        <div>
+          <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div>
+          <a href="https://vincula-medico-front.herokuapp.com">
+            <img src="../../../assets/img/LogoPreto.png" alt="" width="200px" class="img-topo">
+          </a>
+        </div>
       </mat-toolbar>
 
     </div>

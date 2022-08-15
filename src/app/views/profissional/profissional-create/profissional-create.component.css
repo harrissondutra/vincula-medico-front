@@ -1,0 +1,27 @@
+.full-width{
+  width: 100%;
+}
+
+.button-size{
+  width: 150px;
+}
+
+.button{
+  width: 100%;
+}
+
+.mat-toolbar{
+display: flex;
+justify-content: space-between;
+height: 70px;
+}
+
+.geral{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
